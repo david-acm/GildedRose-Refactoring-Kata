@@ -13,9 +13,9 @@ public class GildedRose
 
     public void UpdateQuality()
     {
-        foreach (var t in _items)
+        foreach (var item in _items)
         {
-            t.UpdateItem();
+            ItemType.FromItem(item).UpdateItem();
         }
     }
 }
