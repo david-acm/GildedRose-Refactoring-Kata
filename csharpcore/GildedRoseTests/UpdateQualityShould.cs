@@ -19,7 +19,7 @@ public class UpdateQualityShould
     itemType.UpdateItem();
 
     // Then
-    itemType.Item.Quality.Should().Be(quality - 1);
+    itemType.ItemQuality.Should().Be(quality - 1);
   }
 
   [Theory]
@@ -35,7 +35,7 @@ public class UpdateQualityShould
     itemType.UpdateItem();
 
     // Then
-    itemType.Item.SellIn.Should().Be(sellIn - 1);
+    itemType.ItemSellIn.Should().Be(sellIn - 1);
   }
 
   [Theory]
@@ -51,7 +51,7 @@ public class UpdateQualityShould
     itemType.UpdateItem();
 
     // Then
-    itemType.Item.Quality.Should().Be(quality - 2);
+    itemType.ItemQuality.Should().Be(quality - 2);
   }
 
   [Theory]
@@ -67,7 +67,7 @@ public class UpdateQualityShould
     itemType.UpdateItem();
 
     // Then
-    itemType.Item.Quality.Should().BeGreaterThanOrEqualTo(0);
+    itemType.ItemQuality.Should().BeGreaterThanOrEqualTo(0);
   }
 
   [Theory]
@@ -84,7 +84,7 @@ public class UpdateQualityShould
     itemType.UpdateItem();
 
     // Then
-    itemType.Item.Quality.Should().Be(50);
+    itemType.ItemQuality.Should().Be(50);
   }
 
   [Theory]
@@ -100,8 +100,8 @@ public class UpdateQualityShould
     itemType.UpdateItem();
 
     // Then
-    itemType.Item.Quality.Should().Be(quality);
-    itemType.Item.SellIn.Should().Be(sellIn);
+    itemType.ItemQuality.Should().Be(quality);
+    itemType.ItemSellIn.Should().Be(sellIn);
   }
 
   [Theory]
@@ -120,6 +120,6 @@ public class UpdateQualityShould
     itemType.UpdateItem();
 
     // Then
-    itemType.Item.Quality.Should().Be(expectedQuality);
+    itemType.ItemQuality.Should().Be(expectedQuality);
   }
 }

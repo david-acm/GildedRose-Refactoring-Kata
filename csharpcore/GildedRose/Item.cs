@@ -13,6 +13,7 @@ public class Item
     Quality = quality;
     SellIn  = sellIn;
   }
+  
   public string Name    { get; set; }
   public int    SellIn  { get; set; }
   public int    Quality { get; set; }

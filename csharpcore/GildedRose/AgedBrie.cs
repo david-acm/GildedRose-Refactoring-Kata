@@ -1,18 +1,10 @@
 namespace GildedRoseKata;
 
-public class AgedBrie(Item item) : ItemType
+public class AgedBrie(Item item) : ItemType(item)
 {
-  public override Item Item { get; } = item;
-
-  public override void UpdateItem()
+  protected override int QualityIncreasesBy => ItemSellIn switch
   {
-    Item.SellIn--;
-    var qualityIncrease = Item.SellIn switch
-    {
-      < 0 => 2,
-      _   => 1
-    };
-
-    Item.Quality = int.Min(Item.Quality + qualityIncrease, 50);
-  }
+    < 0 => 2,
+    _   => 1
+  };
 }

@@ -1,9 +1,7 @@
 namespace GildedRoseKata;
 
-public class Sulfuras(Item item) : ItemType
+public class Sulfuras(Item item) : ItemType(item)
 {
-  public override Item Item { get; } = item;
-  public override void UpdateItem()
-  {
-  }
+  protected override int QualityIncreasesBy => 0;
+  protected override int SellInDecreasesBy  => 0;
 }
